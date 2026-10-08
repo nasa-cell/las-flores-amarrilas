@@ -79,7 +79,7 @@
   var palabrasVistas = [];
 
   function segundos() {
-    if (usarReloj) return desfase + (performance.now() - inicioReloj) / 1000;
+    if (usarReloj) return (desfase + (performance.now() - inicioReloj) / 1000) % (audio.duration || 168.3);
     return audio.currentTime;
   }
 
